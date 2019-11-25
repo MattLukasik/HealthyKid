@@ -1,0 +1,33 @@
+.mainParentChildInfo {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  .parent_child_sec {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+
+    .avatar_sec {
+
+      .child_1_circle {
+        text-align: center;
+        margin: 0 auto;
+        border: 1px solid black;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+      }
+
+    }
+
+    .totalPoints_sec {
+        text-align: end;
+
+    }
+  }
+
+
+}

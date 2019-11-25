@@ -1,0 +1,45 @@
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+
+.child {
+  width: 50%;
+  margin: 0 auto;
+  .childCircle {
+    text-align: center;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+  }
+  .childInput {
+    display: block;
+    width: auto;
+    margin: 0 auto;
+  }
+}
+
+.parent {
+  width: 50%;
+  margin: 0 auto;
+  .parentCircle {
+    text-align: center;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+  }
+  .parentInput {
+    display: block;
+    width: auto;
+    margin: 0 auto;
+  }
+
+}

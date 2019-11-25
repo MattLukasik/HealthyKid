@@ -1,0 +1,39 @@
+.mainParent {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  .child_1 {
+
+    .child_1_circle {
+      text-align: center;
+      margin: 0 auto;
+      border: 1px solid black;
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+    }
+
+    .child_1_name {
+      text-align: center;
+    }
+  }
+
+  .child_2 {
+
+    .child_2_circle {
+      text-align: center;
+      margin: 0 auto;
+      border: 1px solid black;
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+    }
+
+    .child_2_name {
+      text-align: center;
+    }
+  }
+}
