@@ -1,5 +1,10 @@
 @import './colors.scss';
+@import './fonts.scss';
+
 
 body {
-  background-color: forestgreen;
+
+    background-image: url("../assets/salad-264826_1280.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }

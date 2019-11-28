@@ -53,10 +53,11 @@ class Main extends Component {
         return (
             <>
                 <div className="main">
+                    {/*<h2 className="header">HealthyKid</h2>*/}
                     <div className="child">
-                        <div className="childCircle">Dziecko</div>
+                        <div className="childCircle"></div>
                             <input className="childInput"
-                                   placeholder="Podaj imię"
+                                   placeholder="Podaj imię (dziecko)"
                                    type="text"
                                    name="name"
                                    value={this.state.name}
@@ -65,9 +66,9 @@ class Main extends Component {
                             {this.state.infoChild}
                     </div>
                     <div className="parent">
-                        <div className="parentCircle">Rodzic</div>
+                        <div className="parentCircle"></div>
                             <input className="parentInput"
-                                   placeholder="Podaj hasło"
+                                   placeholder="Podaj hasło (rodzic)"
                                    type="password"
                                    name="password"
                                    value={this.state.password}

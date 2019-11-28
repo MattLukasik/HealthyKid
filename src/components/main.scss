@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+
 }
 
 
@@ -12,13 +13,14 @@
   margin: 0 auto;
 
   .childCircle {
+    background-image: url("../assets/avocado-3651037_640.png");
+    background-size: contain;
+    background-repeat: no-repeat;
     top: 50px;
     text-align: center;
     margin: 0 auto;
-    border: 1px solid black;
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
   }
   .childInput {
     display: block;
@@ -31,12 +33,13 @@
   width: 50%;
   margin: 0 auto;
   .parentCircle {
+    background-image: url("../assets/eggplant-2924511_640.png");
+    background-size: contain;
+    background-repeat: no-repeat;
     text-align: center;
     margin: 0 auto;
-    border: 1px solid black;
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
   }
   .parentInput {
     display: block;

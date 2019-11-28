@@ -42,6 +42,7 @@ class MainContainer extends Component {
     render() {
         return (
             <>
+                <h2 className="header">HealthyKid</h2>
                 {this.state.visible1 && (
                     <Main
                         showGroupChild={this.handleShowGroupChild}
