@@ -8,7 +8,7 @@ class MainParentChildInfo extends Component {
         super(props);
         this.state = {
             forceReRender: false,
-            // newSum:0,
+            newSum: this.props.points
         }
     };
 
@@ -40,15 +40,21 @@ class MainParentChildInfo extends Component {
         // TUTAJ DODAWANIE PUNKTÓW NIE DZIAŁA NIE UMIEM USTALIĆ CZEMU...
         // to znaczy działa ale za każdym razem trzeba przeładować stronę
 
-        // this.setState({
-        //     newSum: this.props.points + 10,
-        // });
-        this.props.pointsUpdate();
+
+        this.setState(state => {
+            return {
+                newSum: state.newSum + 10
+            }
+        });
+        console.log(this.state.newSum);
+        this.props.pointsUpdate(this.state.newSum);
+        // this.props.pointsUpdate();
+
         fetch("http://localhost:3000/children/1",
             {
                 headers: {'Content-Type': 'application/json'},
                 method: "PATCH",
-                body: JSON.stringify({sum: this.props.points + 10})
+                body: JSON.stringify({sum: this.state.newSum + 10})
             })
             .then(data => {
                 console.log(data);
@@ -83,7 +89,7 @@ class MainParentChildInfo extends Component {
     };
 
     render() {
-
+        console.log(this.state.newSum);
         const childRequestList = this.props.request;
         const childRequestReward = this.props.rewards;
         return (
@@ -97,7 +103,7 @@ class MainParentChildInfo extends Component {
                         </div>
                         <div className="totalPoints_sec">
                             <div className="totalPoints">Aktualny<br/>stan punktów</div>
-                            <h2 className="points">{this.props.points}</h2>
+                            <h2 className="points">{this.state.newSum}</h2>
                         </div>
                     </div>
                     <h3 className="requestListHeader">Lista zgłoszeń do zatwierdzenia</h3>

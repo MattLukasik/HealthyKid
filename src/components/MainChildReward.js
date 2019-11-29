@@ -8,6 +8,7 @@ class MainChildReward extends Component {
         super(props);
         this.state = {
             infoReward:"",
+            newSumRew: this.props.points
 
         }
     }
@@ -24,7 +25,7 @@ class MainChildReward extends Component {
         });
         //Poniżej warunek, jeśli punktów jest za mało nagroda nie zostanie zgłoszona
         let result;
-        if (this.props.points < 100) {
+        if (this.state.newSumRew < 100) {
             result =  <h3 className="alert">Masz za mało punktów!</h3>
         }else {
             result =  <h3 className="alertOk">Nagroda zamówiona!</h3>;
@@ -39,13 +40,18 @@ class MainChildReward extends Component {
                 }).catch(err => {
                 console.log(err);
             });
-            this.props.pointsUpdate();
+            this.setState(state => {
+                return {
+                    newSumRew: state.newSumRew -100
+                }
+            });
+            this.props.pointsUpdate(this.state.newSumRew);
 //odjęcie punktów z puli dziecka
             fetch("http://localhost:3000/children/1",
                 {
                     headers: {'Content-Type': 'application/json'},
                     method: "PATCH",
-                    body: JSON.stringify({sum: this.props.points - 100})
+                    body: JSON.stringify({sum: this.state.newSumRew - 100})
                 })
                 .then(data => {
                     console.log(data);
@@ -70,7 +76,7 @@ class MainChildReward extends Component {
         });
 //Poniżej warunek, jeśli punktów jest za mało nagroda nie zostanie zgłoszona
         let result;
-        if (this.props.points < 100) {
+        if (this.state.newSumRew < 100) {
             result =  <h3 className="alert">Masz za mało punktów!</h3>
         }else {
             result =  <h3 className="alertOk">Nagroda zamówiona!</h3>;
@@ -85,13 +91,18 @@ class MainChildReward extends Component {
                 }).catch(err => {
                 console.log(err);
             });
-            this.props.pointsUpdate();
+            this.setState(state => {
+                return {
+                    newSumRew: state.newSumRew -100
+                }
+            });
+            this.props.pointsUpdate(this.state.newSumRew);
             //odjęcie punktów z puli dziecka
             fetch("http://localhost:3000/children/1",
                 {
                     headers: {'Content-Type': 'application/json'},
                     method: "PATCH",
-                    body: JSON.stringify({sum: this.props.points - 100})
+                    body: JSON.stringify({sum: this.state.newSumRew - 100})
                 })
                 .then(data => {
                     console.log(data);
@@ -106,7 +117,7 @@ class MainChildReward extends Component {
     };
 
     handleRewardCinema = () => {
-        result =  <h3 className="alertOk">Nagroda zamówiona!</h3>;
+        // result =  <h3 className="alertOk">Nagroda zamówiona!</h3>;
         const childRequestReward = this.props.rewards;
         childRequestReward.push({
             description: "Wyjście do kina - 100 punktów",
@@ -115,7 +126,7 @@ class MainChildReward extends Component {
         });
 //Poniżej warunek, jeśli punktów jest za mało nagroda nie zostanie zgłoszona
         let result;
-        if (this.props.points < 100) {
+        if (this.state.newSumRew < 100) {
             result =  <h3 className="alert">Masz za mało punktów!</h3>
         }else {
             result =  <h3 className="alertOk">Nagroda zamówiona!</h3>;
@@ -130,13 +141,18 @@ class MainChildReward extends Component {
                 }).catch(err => {
                 console.log(err);
             });
-            this.props.pointsUpdate();
+            this.setState(state => {
+                return {
+                    newSumRew: state.newSumRew -100
+                }
+            });
+            this.props.pointsUpdate(this.state.newSumRew);
             //odjęcie punktów z puli dziecka
             fetch("http://localhost:3000/children/1",
                 {
                     headers: {'Content-Type': 'application/json'},
                     method: "PATCH",
-                    body: JSON.stringify({sum: this.props.points - 100})
+                    body: JSON.stringify({sum: this.state.newSumRew - 100})
                 })
                 .then(data => {
                     console.log(data);
@@ -158,7 +174,7 @@ class MainChildReward extends Component {
                         <div className="childAvatar"></div>
                         <h2 className="childName">Zosia</h2>
                     </div>
-                    <div className="totalPoints">Aktualnie posiadasz<div className="pointsResult">{this.props.points}</div>punktów</div>
+                    <div className="totalPoints">Aktualnie posiadasz<div className="pointsResult">{this.state.newSumRew}</div>punktów</div>
                     <h2 className="listHeader">Wybierz nagrodę z listy</h2>
 
                     <ul className="listRewards">{this.state.infoReward}
