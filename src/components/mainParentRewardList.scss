@@ -1,36 +1,75 @@
 .mainParentRewardList {
-  height: 100vh;
+  height: 637px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
 
+  .rewardListHeader {
+    width: 75%;
+    height: auto;
+    padding: 8px;
+    margin-top: 200px;
+    text-align: center;
+    font-size: 1.2rem;
+    border: 2px solid green;
+    background-color: green;
+    border-radius: 14px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  }
+
   .parentReturn {
-    border: 1px solid black;
-    width: 50px;
-    height: 50px;
+    font-size: 1.3rem;
+    width: 90px;
+    height: 30px;
+    Padding: 8px;
+    text-align: center;
     align-self: flex-end;
+    border: 2px solid green;
+    background-color: green;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    cursor:pointer;
+    position: fixed;
+    top: 10px;
+  }
+
+  .parentReturn:active {
+    font-size: 1.2rem;
   }
 
   .rewardsList {
-    width: 100%;
+    width: 90%;
     height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: start;
+    padding-left: 5px;
 
     .itemRewards {
       width: 90%;
+      font-size: 1rem;
+      font-weight: 800;
       list-style-type: none;
       display: flex;
+      padding: 8px;
       justify-content: space-between;
+      border: 2px solid green;
+      background-color: green;
+      border-radius: 8px;
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
       .priceBox {
-        border: 1px solid black;
-        width: 30px;
-        height: 30px;
+        font-size: 1rem;
         text-align: center;
+        align-self: center;
+        padding: 5px;
+        border: 2px solid green;
+        background-color: green;
+        border-radius: 7px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
       }
     }
 

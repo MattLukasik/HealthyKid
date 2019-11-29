@@ -4,9 +4,10 @@ import Main from "./Main";
 import GroupContainerChild from "./GroupContainerChild";
 import GroupContainerParent from "./GroupContainerParent";
 
+import './mainContainer.scss';
 
 class MainContainer extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
             visible1: true,
@@ -14,13 +15,6 @@ class MainContainer extends Component {
             visible3: false,
         }
     }
-    // handleShowMain = () => {
-    //     this.setState({
-    //         visible1: true,
-    //         visible2: false,
-    //         visible3: false,
-    //     });
-    // };
 
 
     handleShowGroupChild = () => {
@@ -42,21 +36,23 @@ class MainContainer extends Component {
     render() {
         return (
             <>
-                <h2 className="header">HealthyKid</h2>
-                {this.state.visible1 && (
-                    <Main
-                        showGroupChild={this.handleShowGroupChild}
-                        showGroupParent={this.handleShowGroupParent}
-                    />
-                )}
-                {this.state.visible2 && (
-                    <GroupContainerChild
-                    />
-                )}
-                {this.state.visible3 && (
-                    <GroupContainerParent
-                    />
-                )}
+                <div className="mainContainer">
+                    <h2 className="header">HealthyKid</h2>
+                    {this.state.visible1 && (
+                        <Main
+                            showGroupChild={this.handleShowGroupChild}
+                            showGroupParent={this.handleShowGroupParent}
+                        />
+                    )}
+                    {this.state.visible2 && (
+                        <GroupContainerChild
+                        />
+                    )}
+                    {this.state.visible3 && (
+                        <GroupContainerParent
+                        />
+                    )}
+                </div>
             </>
         )
     }

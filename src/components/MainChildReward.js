@@ -25,8 +25,9 @@ class MainChildReward extends Component {
         //Poniżej warunek, jeśli punktów jest za mało nagroda nie zostanie zgłoszona
         let result;
         if (this.props.points < 100) {
-            result =  <h3>Masz za mało punktów!</h3>
+            result =  <h3 className="alert">Masz za mało punktów!</h3>
         }else {
+            result =  <h3 className="alertOk">Nagroda zamówiona!</h3>;
             fetch("http://localhost:3000/parent/1",
                 {
                     headers: {'Content-Type': 'application/json'},
@@ -70,8 +71,9 @@ class MainChildReward extends Component {
 //Poniżej warunek, jeśli punktów jest za mało nagroda nie zostanie zgłoszona
         let result;
         if (this.props.points < 100) {
-            result =  <h3>Masz za mało punktów!</h3>
+            result =  <h3 className="alert">Masz za mało punktów!</h3>
         }else {
+            result =  <h3 className="alertOk">Nagroda zamówiona!</h3>;
             fetch("http://localhost:3000/parent/1",
                 {
                     headers: {'Content-Type': 'application/json'},
@@ -104,7 +106,7 @@ class MainChildReward extends Component {
     };
 
     handleRewardCinema = () => {
-
+        result =  <h3 className="alertOk">Nagroda zamówiona!</h3>;
         const childRequestReward = this.props.rewards;
         childRequestReward.push({
             description: "Wyjście do kina - 100 punktów",
@@ -114,8 +116,9 @@ class MainChildReward extends Component {
 //Poniżej warunek, jeśli punktów jest za mało nagroda nie zostanie zgłoszona
         let result;
         if (this.props.points < 100) {
-            result =  <h3>Masz za mało punktów!</h3>
+            result =  <h3 className="alert">Masz za mało punktów!</h3>
         }else {
+            result =  <h3 className="alertOk">Nagroda zamówiona!</h3>;
             fetch("http://localhost:3000/parent/1",
                 {
                     headers: {'Content-Type': 'application/json'},
@@ -151,18 +154,22 @@ class MainChildReward extends Component {
             <>
                 <div className="mainChildReward">
                     <div onClick={this.props.showMainChild} className="childReturn">Powrót</div>
-                    <div className="totalPoints">Aktualnie posiadasz {this.props.points} punktów</div>
-                    <h2 className="listHeader">Lista dostępnych nagród</h2>
-                    {this.state.infoReward}
-                    <ul className="listRewards">
-                        <li onClick={this.handleRewardXBox} className="liRewards">
-                            Dodatkowy czas na konsoli (30 minut) - 100 punktów
+                    <div className="child_sec">
+                        <div className="childAvatar"></div>
+                        <h2 className="childName">Zosia</h2>
+                    </div>
+                    <div className="totalPoints">Aktualnie posiadasz<div className="pointsResult">{this.props.points}</div>punktów</div>
+                    <h2 className="listHeader">Wybierz nagrodę z listy</h2>
+
+                    <ul className="listRewards">{this.state.infoReward}
+                        <li onClick={this.handleRewardXBox} className="liRewards"><div className="liRewardsText">
+                            Dodatkowy czas na konsoli (30 minut) - 100 punktów</div>
                         </li>
-                        <li onClick={this.handleRewardPhone} className="liRewards">
-                            Dodatkowy czas na telefonie (30 minut) - 100 punktów
+                        <li onClick={this.handleRewardPhone} className="liRewards"><div className="liRewardsText">
+                            Dodatkowy czas na telefonie (30 minut) - 100 punktów</div>
                         </li>
-                        <li onClick={this.handleRewardCinema} className="liRewards">
-                            Wyjście do kina - 100 punktów
+                        <li onClick={this.handleRewardCinema} className="liRewards"><div className="liRewardsText">
+                            Wyjście do kina - 100 punktów</div>
                         </li>
                     </ul>
                 </div>

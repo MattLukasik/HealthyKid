@@ -8,10 +8,10 @@ class MainChild extends Component {
         return (
             <>
                 <div className="mainChild">
-                    <div className="totalPoints">Aktualnie posiadasz {this.props.points} punktów</div>
+                    <div className="totalPoints">Aktualnie posiadasz<div className="pointsResult">{this.props.points}</div>punktów</div>
                     <div className="child_sec">
                         <div className="childAvatar"></div>
-                        <h2 className="childName">Imię</h2>
+                        <h2 className="childName">Zosia</h2>
                     </div>
                     <div className="widgets">
                         <div onClick={this.props.showPoints} className="widget gainPoints">Zbieraj punkty</div>

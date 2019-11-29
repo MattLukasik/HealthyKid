@@ -1,19 +1,70 @@
 .mainChild {
-  height: 100vh;
+  height: 637px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  font-family: var(--Dokdo);
+
+
+  .totalPoints {
+    width: 80%;
+    height: auto;
+    text-align: center;
+    font-size: 1.5rem;
+    border: 2px solid green;
+    background-color: green;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    .pointsResult {
+      margin: -10px auto;
+      font-size: 2.5rem;
+    }
+
+  }
+
+
+  .child_sec {
+    width: 200px;
+    height: 200px;
+    position: relative;
+
+
+    .childAvatar {
+      background-image: url("../assets/fruit-1144989_640.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin: 0 0 0 50px;
+      width: 150px;
+      height: 150px;
+    }
+
+    .childName {
+      font-size: 2.5rem;
+      text-align: center;
+      margin: 0;
+    }
+  }
 
   .widgets {
     width: 100vw;
     display: flex;
     justify-content: space-evenly;
+
     .widget {
-      border: 1px solid black;
-      width: 50px;
+      font-size: 1.3rem;
+      text-align: center;
+      width: 80px;
       height: 50px;
+      border: 2px solid green;
+      background-color: green;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      cursor: pointer;
+    }
+    .widget:active {
+      font-size: 1.1rem;
     }
   }
-
 }

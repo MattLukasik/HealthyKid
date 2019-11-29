@@ -7,6 +7,9 @@ import './mainChildPoints.scss';
 class MainChildPoints extends Component {
     constructor(props) {
         super(props);
+        this.state = {
+            infoRequest:"",
+        }
     }
 
     //USTALAMY METODY KTÓRA DODADZĄ ZGŁOSZENIA PUNKTÓW DO LISTY (URUCHAMIANE KLIKIEM)
@@ -19,6 +22,8 @@ class MainChildPoints extends Component {
             timestamp: new Date(),
             accepted: false
         });
+        let result;
+        result =  <h3 className="alertOk">Zgłoszenie wysłane!</h3>;
 
         fetch("http://localhost:3000/parent/1",
             {
@@ -31,7 +36,9 @@ class MainChildPoints extends Component {
             }).catch(err => {
             console.log(err);
         });
-
+        this.setState({
+            infoRequest: result,
+        })
     };
 
     handleAddPoints_10_idea = () => {
@@ -42,7 +49,8 @@ class MainChildPoints extends Component {
             timestamp: new Date(),
             accepted: false,
         });
-
+        let result;
+        result =  <h3 className="alertOk">Zgłoszenie wysłane!</h3>;
         fetch("http://localhost:3000/parent/1",
             {
                 headers: {'Content-Type': 'application/json'},
@@ -54,6 +62,9 @@ class MainChildPoints extends Component {
             }).catch(err => {
             console.log(err);
         });
+        this.setState({
+            infoRequest: result,
+        })
     };
 
     handleAddPoints_10_prepare = () => {
@@ -64,7 +75,8 @@ class MainChildPoints extends Component {
             timestamp: new Date(),
             accepted: false,
         });
-
+        let result;
+        result =  <h3 className="alertOk">Zgłoszenie wysłane!</h3>;
         fetch("http://localhost:3000/parent/1",
             {
                 headers: {'Content-Type': 'application/json'},
@@ -76,7 +88,9 @@ class MainChildPoints extends Component {
             }).catch(err => {
             console.log(err);
         });
-
+        this.setState({
+            infoRequest: result,
+        })
     };
 
     render() {
@@ -84,18 +98,22 @@ class MainChildPoints extends Component {
             <>
                 <div className="mainChildPoints">
                     <div onClick={this.props.showMainChild} className="childReturn">Powrót</div>
-                    <div className="totalPoints">Aktualnie posiadasz {this.props.points} punktów</div>
-                    <h2 className="listHeader">Wybierz z listy</h2>
-                    <ul className="listPoints">
-                        <li onClick={this.handleAddPoints_10_eat} className="liPoints">Zjedzona porcja warzyw - 10
-                            punktów
+                    <div className="child_sec">
+                        <div className="childAvatar"></div>
+                        <h2 className="childName">Zosia</h2>
+                    </div>
+                    <div className="totalPoints">Aktualnie posiadasz<div className="pointsResult">{this.props.points}</div>punktów</div>
+                    <h2 className="listHeader">Zgłoś punkty do zatwierdzenia</h2>
+                    <ul className="listPoints">{this.state.infoRequest}
+                        <li onClick={this.handleAddPoints_10_eat} className="liPoints"><div className="liPointsText">Zjedzona porcja warzyw - 10
+                            punktów</div>
                         </li>
-                        <li onClick={this.handleAddPoints_10_idea} className="liPoints">Super pomysł na warzywo - 10
-                            punktów
+                        <li onClick={this.handleAddPoints_10_idea} className="liPoints"><div className="liPointsText">Super pomysł na warzywo - 10
+                            punktów</div>
                         </li>
-                        <li onClick={this.handleAddPoints_10_prepare} className="liPoints">Przyrządzenie potrawy z
+                        <li onClick={this.handleAddPoints_10_prepare} className="liPoints"><div className="liPointsText">Przyrządzenie potrawy z
                             warzyw -
-                            10 punktów
+                            10 punktów</div>
                         </li>
                     </ul>
                 </div>

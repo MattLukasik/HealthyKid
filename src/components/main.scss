@@ -1,10 +1,21 @@
 .main {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 637px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
+}
 
+.alert {
+  color:red;
+  font-weight: 700;
+  margin:0;
+}
+.alertOk {
+  color: green;
+  font-weight: 700;
+  margin:0;
 }
 
 
@@ -13,19 +24,38 @@
   margin: 0 auto;
 
   .childCircle {
-    background-image: url("../assets/avocado-3651037_640.png");
+    background-image: url("../assets/tomato-1456768_640.png");
     background-size: contain;
     background-repeat: no-repeat;
-    top: 50px;
     text-align: center;
     margin: 0 auto;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
   }
   .childInput {
     display: block;
     width: auto;
     margin: 0 auto;
+    border: none;
+    padding: 5px 0 3px 10px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+
+  .childBtn {
+    font-family: var(--Rock);
+    font-size: .9rem;
+    width: 90px;
+    height: 40px;
+    color: white;
+    border: 2px solid green;
+    background-color: green;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    cursor: pointer;
+  }
+  .childBtn:active {
+    font-size:.7rem;
   }
 }
 
@@ -45,6 +75,27 @@
     display: block;
     width: auto;
     margin: 0 auto;
+    border: none;
+    padding: 5px 0 3px 10px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   }
+
+  .parentBtn {
+    font-family: var(--Rock);
+    font-size: .9rem;
+    width: 90px;
+    height: 40px;
+    color: white;
+    border: 2px solid green;
+    background-color: green;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    cursor: pointer;
+  }
+  .parentBtn:active {
+    font-size:.7rem;
+  }
+
 
 }

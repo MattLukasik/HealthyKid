@@ -1,5 +1,21 @@
-.header{
-  margin-top:30px;
-  position: fixed;
-  top:0;
+.mainContainer {
+
+  font-family: var(--OpenSans);
+  color: white;
+  max-width: 360px;
+  margin: auto;
+
+
+
+  .header{
+    font-family: var(--Rock);
+    color: white;
+    position: fixed;
+    top:0;
+    margin: 0;
+
+  }
+
 }
+
+

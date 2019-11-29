@@ -1,29 +1,109 @@
 .mainChildReward {
-  height: 100vh;
+  height: 100%;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  font-family: var(--Dokdo);
+
 
   .childReturn {
-    border: 1px solid black;
-    width: 50px;
-    height: 50px;
+    font-size: 1.5rem;
+    width: 80px;
+    height: 30px;
+    text-align: center;
     align-self: flex-end;
+    border: 2px solid green;
+    background-color: green;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+  }
+  .childReturn:active {
+    font-size: 1.4rem;
   }
 
+  .child_sec {
+
+    .childAvatar {
+      background-image: url("../assets/fruit-1144989_640.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      text-align: center;
+      margin: 0 0 0 50px;
+      width: 150px;
+      height: 150px;
+    }
+
+    .childName {
+      font-size: 2.5rem;
+      text-align: center;
+      margin: 0;
+    }
+  }
+
+  .totalPoints {
+    width: 85%;
+    height: auto;
+    text-align: center;
+    font-size: 1.5rem;
+    border: 2px solid green;
+    background-color: green;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+    .pointsResult {
+      margin: -10px auto;
+      font-size: 2.5rem;
+    }
+  }
+
+  .listHeader {
+    width: 70%;
+    text-align: center;
+    font-size: 1.3rem;
+    border: 1px solid green;
+    background-color: green;
+    border-radius: 6px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+  }
+
+
   .listRewards {
-    width: 100%;
-    height: 200px;
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    padding-left: 0;
 
     .liRewards {
-      //width: 80vw;
+      width: 90%;
+      height: 50px;
+      padding: 5px 5px 10px 5px;
+      margin: 2px auto 2px;
       list-style-type: none;
+      font-size: 1.2rem;
+      font-family: var(--Marker);
+      border: 1px solid green;
+      background-color: green;
+      border-radius: 6px;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+      cursor: pointer;
+
+      .liRewardsText {
+        margin: 2px auto 2px;
+      }
+      .liRewardsText:active {
+        margin: 4px auto 4px;
+      }
     }
+
 
   }
 

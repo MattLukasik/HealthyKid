@@ -23,8 +23,8 @@ class Main extends Component {
     handleClickChild = e => {
         e.preventDefault();
         let result;
-        if (this.state.name !== "Zosia" && this.state.name !== "Zofia") {
-            result =  <span>Nieproawidłowe imię. Wpisz "Zosia" lub "Zofia"</span>
+        if (this.state.name !== "Zosia" && this.state.name !== "Staszek") {
+            result =  <span className="alert">Nieproawidłowe imię. Wpisz "Zosia" lub "Staszek"</span>
         }else {
             this.props.showGroupChild();
         }
@@ -39,7 +39,7 @@ class Main extends Component {
         let result;
 
         if (this.state.password !== "a") {
-            result =  <span>Nieprawidłowe hasło</span>
+            result =  <span className="alert">Nieprawidłowe hasło</span>
         } else {
             this.props.showGroupParent();
         }
@@ -62,7 +62,7 @@ class Main extends Component {
                                    name="name"
                                    value={this.state.name}
                                    onChange={this.handleChange}/>
-                            <button onClick={this.handleClickChild} className="childBtn">Wejdź</button>
+                            <button onClick={this.handleClickChild} className="childBtn">Zaloguj</button>
                             {this.state.infoChild}
                     </div>
                     <div className="parent">
@@ -73,7 +73,7 @@ class Main extends Component {
                                    name="password"
                                    value={this.state.password}
                                    onChange={this.handleChange}/>
-                            <button onClick={this.handleClickParent} className="parentBtn">Wejdź</button>
+                            <button onClick={this.handleClickParent} className="parentBtn">Zaloguj</button>
                             {this.state.infoParent}
                     </div>
                 </div>

@@ -100,22 +100,24 @@ class MainParentChildInfo extends Component {
                             <h2 className="points">{this.props.points}</h2>
                         </div>
                     </div>
-                    <ul className="requestList">Lista zgłoszeń do zatwierdzenia
+                    <h3 className="requestListHeader">Lista zgłoszeń do zatwierdzenia</h3>
+                    <ul className="requestList">
                         {childRequestList.map((req, index) => {
                             return (
-                                !req.accepted &&<li key={index}>
+                                !req.accepted &&<li className="liRequest" key={index}>
                                     <div>{req.description}</div>
-                                    <button onClick={this.handleRequest.bind(this, index)}>Zatwierdź</button>
+                                    <button className="requestBtn" onClick={this.handleRequest.bind(this, index)}>Zatwierdź</button>
                                 </li>
                             )
                         })}
                     </ul>
-                    <ul className="rewardsList">Lista zakupionych nagród
+                    <h3 className="rewardsListHeader">Lista zakupionych nagród</h3>
+                    <ul className="rewardsList">
                         {childRequestReward.map((req, index) => {
                             return (
-                                !req.accepted && <li key={index}>
+                                !req.accepted && <li className="liReward" key={index}>
                                     <div>{req.description}</div>
-                                    <button onClick={this.handleReward.bind(this, index)}>Zrealizuj</button>
+                                    <button className="rewardBtn" onClick={this.handleReward.bind(this, index)}>Zrealizuj</button>
                                 </li>
                             )
                         })}

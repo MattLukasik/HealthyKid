@@ -1,39 +1,71 @@
 .mainParent {
-  height: 100vh;
+  height: 637px;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
 
+  .listHeader {
+    width: 85%;
+    height: auto;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 5px;
+    border: 2px solid green;
+    background-color: green;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+
+  }
+  .listHeader:active {
+    width: 83%;
+    height: 32px;
+    font-size: 1.45rem;
+  }
+
+
+
   .child_1 {
 
     .child_1_circle {
+      background-image: url("../assets/fruit-1144989_640.png");
+      background-size: contain;
+      background-repeat: no-repeat;
       text-align: center;
-      margin: 0 auto;
-      border: 1px solid black;
-      border-radius: 50%;
-      width: 100px;
-      height: 100px;
+      margin: 0 0 0 50px;
+      width: 150px;
+      height: 150px;
+      cursor: pointer;
     }
 
     .child_1_name {
+      font-size: 2.5rem;
       text-align: center;
+      margin: 0;
+      cursor: pointer;
     }
   }
 
   .child_2 {
 
     .child_2_circle {
+      background-image: url("../assets/banana-1773796_640.png");
+      background-size: contain;
+      background-repeat: no-repeat;
       text-align: center;
-      margin: 0 auto;
-      border: 1px solid black;
-      border-radius: 50%;
-      width: 100px;
-      height: 100px;
+      margin: 0 0 0 50px;
+      width: 150px;
+      height: 150px;
+      cursor: pointer;
     }
 
     .child_2_name {
+      font-size: 2.5rem;
       text-align: center;
+      margin: 0;
+      cursor: pointer;
     }
   }
 }
