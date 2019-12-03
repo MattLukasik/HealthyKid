@@ -33,7 +33,6 @@ class Main extends Component {
         })
 
     };
-
     handleClickParent = e => {
         e.preventDefault();
         let result;

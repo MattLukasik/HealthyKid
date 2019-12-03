@@ -1,3 +1,20 @@
+# HealthyKid App
+> Final project at CodersLab
+>
+#### HTML5, CSS, Sass, JavaScript, React
+
+loyalty app for children, encouraging them to eat more vegetables.
+Child declares eating vegetable, the parent approves it and grants points.
+Then child can switch the points for award chosen for the list. 
+Password for parent is "a" :)
+#
+In the future there will be second child added (right now in progress).
+Also award list should be dynamically set by a parent.
+
+#
+#
+#
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

@@ -1,19 +1,25 @@
 {
-  posts: [
+  "children": [
     {
-      id: 1,
-      title: "json-server",
-      author: "typicode"
+      "id": 1,
+      "name": "Zosia",
+      "sum": 220
+    },
+    {
+      "id": 2,
+      "name": "Staszek",
+      "sum": 0
     }
   ],
-  comments: [
+  "parent": [
     {
-      id: 1,
-      body: "some comment",
-      postId: 1
+      "id": 1,
+      "requests": [
+
+      ],
+      "rewards": [
+
+      ]
     }
-  ],
-  profile: {
-    name: "typicode"
-  }
+  ]
 }
