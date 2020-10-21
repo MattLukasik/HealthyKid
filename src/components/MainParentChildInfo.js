@@ -48,7 +48,6 @@ class MainParentChildInfo extends Component {
         });
         console.log(this.state.newSum);
         this.props.pointsUpdate(this.state.newSum);
-        // this.props.pointsUpdate();
 
         fetch("http://localhost:3000/children/1",
             {

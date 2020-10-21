@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import ReactDOM from "react-dom";
 import MainChild from "./MainChild";
 import MainChildPoints from "./MainChildPoints";
 import MainChildReward from "./MainChildReward";

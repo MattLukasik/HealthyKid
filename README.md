@@ -5,9 +5,8 @@
 
 Loyalty app for children, which, I hope, can encourage them to eat more vegetables.
 
-Child declares eating vegetable, parent approves it and grants points.
-Then child can switch the points for award chosen for the list, while parent gets it on his "awards order list".  
-Password for parent is "a" :)
+While child declares eating vegetable via app, parent approves it and grants points. Then child can exchange the points for an award chosen from the list, while parent receive it as “award ordered” info.
+Parent's password is "a" :)
 
 In the future there will be second child added (right now in progress).
 Also list of available wards should be dynamically set by a parent.

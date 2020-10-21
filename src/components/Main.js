@@ -24,7 +24,7 @@ class Main extends Component {
         e.preventDefault();
         let result;
         if (this.state.name !== "Zosia" && this.state.name !== "Staszek") {
-            result =  <span className="alert">Nieproawidłowe imię. Wpisz "Zosia" lub "Staszek"</span>
+            result =  <span className="alert">Nieprawidłowe imię. Wpisz "Zosia" lub "Staszek"</span>
         }else {
             this.props.showGroupChild();
         }
@@ -52,7 +52,6 @@ class Main extends Component {
         return (
             <>
                 <div className="main">
-                    {/*<h2 className="header">HealthyKid</h2>*/}
                     <div className="child">
                         <div className="childCircle"></div>
                             <input className="childInput"
